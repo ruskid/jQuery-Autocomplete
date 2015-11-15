@@ -470,7 +470,7 @@
                 value = that.el.val(),
                 query = that.getQuery(value);
 
-            if (that.selection && that.currentValue !== query) {
+            if (that.selection || that.currentValue !== query) {
                 that.selection = null;
                 (options.onInvalidateSelection || $.noop).call(that.element);
             }
